@@ -18,8 +18,10 @@ public class UserEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	@Column(name = "USERNAME", unique = true)
 	private String username;
 
+	@Column(name = "PASSWORD_HASH", nullable = false)
 	private String passwordHash;
 
 	@OneToMany
