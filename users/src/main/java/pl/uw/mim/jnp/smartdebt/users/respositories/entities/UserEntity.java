@@ -28,3 +28,4 @@ public class UserEntity {
 	private List<UserEntity> debtors;
 
 }
+
