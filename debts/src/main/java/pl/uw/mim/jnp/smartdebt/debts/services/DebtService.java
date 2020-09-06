@@ -17,6 +17,5 @@ public class DebtService {
 	public DebtorHistoryDto getDebtorHistory(Long questionerId, Long debtorId){
 		List<DebtEntity> debts = debtRepository.findAllBySecondUserIdOrderByCreationTimestampDesc(debtorId);
 		return DebtorHistoryDtoMapper.map(questionerId, debtorId, debts);
-
 	}
 }
