@@ -1,17 +1,15 @@
 package pl.uw.mim.jnp.smartdebt.users.respositories.entities;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
 import javax.persistence.*;
-import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Entity
+@Builder
 @Table(name = "APPLICATION_USER")
 public class UserEntity {
 	@Id
@@ -22,10 +20,7 @@ public class UserEntity {
 	private String username;
 
 	@Column(name = "PASSWORD_HASH", nullable = false)
+	@JsonIgnore
 	private String passwordHash;
-
-	@OneToMany
-	private List<UserEntity> debtors;
-
 }
 

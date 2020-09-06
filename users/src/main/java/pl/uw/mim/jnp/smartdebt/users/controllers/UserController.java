@@ -1,21 +1,24 @@
 package pl.uw.mim.jnp.smartdebt.users.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.bind.annotation.*;
+import pl.uw.mim.jnp.smartdebt.users.models.user.UserDto;
+import pl.uw.mim.jnp.smartdebt.users.usecases.RegisterNewUser;
 
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping
 public class UserController {
 
-	@PostMapping("/register")
-	ResponseEntity<?> registerNewUser(@RequestParam String username, @RequestParam String password){
-		return ResponseEntity.ok().build();
-	}
+	@Autowired
+	private RegisterNewUser registerNewUser;
 
+	@PostMapping("/register")
+	ResponseEntity<?> registerNewUser(@RequestBody UserDto userDto) {
+		return ResponseEntity.ok(registerNewUser.execute(userDto));
+	}
 
 
 }
