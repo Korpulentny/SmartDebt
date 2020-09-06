@@ -1,0 +1,12 @@
+create table user (id  bigserial not null, password_hash varchar(255) not null, username varchar(255), primary key (id));
+create table user_debtors (user_entity_id int8 not null, debtors_id int8 not null);
+alter table user add constraint UK_sb8bbouer5wak8vyiiy4pf2bx unique (username);
+alter table user_debtors add constraint UK_l1ts69k1fusrtvrvuub1fflnr unique (debtors_id);
+alter table user_debtors add constraint FKex3u7qvg01qe99phfgial2ep8 foreign key (debtors_id) references user;
+alter table user_debtors add constraint FKhuie9cxni3bfjt6pv7vy4r1ea foreign key (user_entity_id) references user;
+create table application_user (id  bigserial not null, password_hash varchar(255) not null, username varchar(255), primary key (id));
+create table application_user_debtors (user_entity_id int8 not null, debtors_id int8 not null);
+alter table application_user add constraint UK_6c0v0rco93sykgyetukfmkkod unique (username);
+alter table application_user_debtors add constraint UK_a9y0u3ux1fiuabr2coo61p7c3 unique (debtors_id);
+alter table application_user_debtors add constraint FKogh64psaculv3ahwbpwvy7grc foreign key (debtors_id) references application_user;
+alter table application_user_debtors add constraint FKay8wo6bxcj905xw55r27km7my foreign key (user_entity_id) references application_user;
