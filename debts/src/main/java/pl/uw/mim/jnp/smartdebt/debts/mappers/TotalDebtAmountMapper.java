@@ -9,6 +9,6 @@ import java.util.List;
 @UtilityClass
 public class TotalDebtAmountMapper {
 	public BigDecimal map(List<DebtEntity> debtEntities) {
-		return debtEntities.stream().map(DebtAmountMapper::map).reduce(BigDecimal::add).orElseThrow();
+		return debtEntities.stream().map(DebtAmountMapper::map).reduce(new BigDecimal(0),BigDecimal::add);
 	}
 }

@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface DebtRepository extends JpaRepository<DebtEntity, Long> {
 
-	List<DebtEntity> findAllBySecondUserIdOrderByCreationTimestampDesc(Long secondUserId);
+	List<DebtEntity> findAllByFirstUserIdAndSecondUserIdOrderByCreationTimestampDesc(Long firstUserId, Long secondUserId);
 
 
 }
