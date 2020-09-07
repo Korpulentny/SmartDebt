@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import pl.uw.mim.jnp.smartdebt.users.respositories.entities.UserEntity;
 
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
-	UserEntity findUserEntityByUsernameAndPasswordHash(String username, String passwordHash);
+	UserEntity findUserEntityByUsernameAndPassword(String username, String password);
 
 	Boolean existsByUsername(String username);
 

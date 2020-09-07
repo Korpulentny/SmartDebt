@@ -1,4 +1,5 @@
 package pl.uw.mim.jnp.smartdebt.users.respositories.entities;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
@@ -8,8 +9,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity
 @Builder
+@Entity
 @Table(name = "APPLICATION_USER")
 public class UserEntity {
 	@Id
@@ -19,8 +20,10 @@ public class UserEntity {
 	@Column(name = "USERNAME", unique = true)
 	private String username;
 
-	@Column(name = "PASSWORD_HASH", nullable = false)
+	@Column(name = "PASSWORD", nullable = false)
 	@JsonIgnore
-	private String passwordHash;
+	private String password;
 }
+
+
 

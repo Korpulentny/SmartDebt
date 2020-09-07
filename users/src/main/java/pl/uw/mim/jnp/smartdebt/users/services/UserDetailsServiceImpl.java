@@ -31,9 +31,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		if (user == null) {
 			throw new UsernameNotFoundException(username);
 		}
-		return new User(user.getUsername(), user.getPasswordHash(), Collections.emptyList());
+		return new User(user.getUsername(), user.getPassword(), Collections.emptyList());
 	}
-
 
 	public UserEntity saveUser(UserDto userDto)  throws SuchUsernameExistsException {
 		if (userRepository.existsByUsername(userDto.getUsername())) {
@@ -41,7 +40,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		}
 		return userRepository.save(UserEntity.builder()
 				.username(userDto.getUsername())
-				.passwordHash(bCryptPasswordEncoder.encode(userDto.getPassword()))
+				.password(bCryptPasswordEncoder.encode(userDto.getPassword()))
 				.build());
 	}
 
