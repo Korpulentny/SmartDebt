@@ -1,4 +1,4 @@
-package pl.uw.mim.jnp.smartdebt.users.respositories.entities;
+package pl.uw.mim.jnp.smartdebt.users.repositories.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
@@ -20,7 +20,7 @@ public class UserEntity {
 	@Column(name = "USERNAME", unique = true)
 	private String username;
 
-	@Column(name = "PASSWORD", nullable = false)
+	@Column(name = "PASSWORD_HASH", nullable = false)
 	@JsonIgnore
 	private String password;
 }

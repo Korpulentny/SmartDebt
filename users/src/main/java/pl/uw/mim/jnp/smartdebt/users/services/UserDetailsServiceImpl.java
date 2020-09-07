@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 
 import pl.uw.mim.jnp.smartdebt.users.exceptions.SuchUsernameExistsException;
 import pl.uw.mim.jnp.smartdebt.users.models.user.UserDto;
-import pl.uw.mim.jnp.smartdebt.users.respositories.UserRepository;
-import pl.uw.mim.jnp.smartdebt.users.respositories.entities.UserEntity;
+import pl.uw.mim.jnp.smartdebt.users.repositories.UserRepository;
+import pl.uw.mim.jnp.smartdebt.users.repositories.entities.UserEntity;
 
 import java.util.Collections;
 
@@ -32,6 +32,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 			throw new UsernameNotFoundException(username);
 		}
 		return new User(user.getUsername(), user.getPassword(), Collections.emptyList());
+	}
+
+	public Boolean userExists(String username){
+		return userRepository.existsByUsername(username);
 	}
 
 	public UserEntity saveUser(UserDto userDto)  throws SuchUsernameExistsException {

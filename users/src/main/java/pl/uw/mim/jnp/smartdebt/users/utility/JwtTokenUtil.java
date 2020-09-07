@@ -1,13 +1,9 @@
-package pl.uw.mim.jnp.smartdebt.users.configuration;
+package pl.uw.mim.jnp.smartdebt.users.utility;
 
 
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.experimental.UtilityClass;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Component;
-
-
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -23,8 +19,7 @@ public class JwtTokenUtil implements Serializable {
 	private final long serialVersionUID = -2550185165626007488L;
 	private final long JWT_VALIDITY = 60 * 60 * 10;
 
-	@Value("${jwt.secret")
-	private String secret;
+	private final static String secret = "sekret";
 
 	public String getUsernameFromJwt(String jwt){
 		return getSingleClaimFromJwt(jwt, Claims::getSubject);
@@ -54,10 +49,13 @@ public class JwtTokenUtil implements Serializable {
 	}
 
 	private String doGenerateToken(Map<String, Object> claims, String subject) {
-
-		return Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis()))
+		return Jwts.builder()
+				.setClaims(claims)
+				.setSubject(subject)
+				.setIssuedAt(new Date(System.currentTimeMillis()))
 				.setExpiration(new Date(System.currentTimeMillis() + JWT_VALIDITY * 1000))
-				.signWith(SignatureAlgorithm.HS512, secret).compact();
+				.signWith(SignatureAlgorithm.HS512, secret)
+				.compact();
 	}
 
 	public Boolean validateToken(String jwt, UserDetails userDetails) {

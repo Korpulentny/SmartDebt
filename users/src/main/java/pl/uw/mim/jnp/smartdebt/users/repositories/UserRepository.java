@@ -1,10 +1,9 @@
-package pl.uw.mim.jnp.smartdebt.users.respositories;
+package pl.uw.mim.jnp.smartdebt.users.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import pl.uw.mim.jnp.smartdebt.users.respositories.entities.UserEntity;
+import pl.uw.mim.jnp.smartdebt.users.repositories.entities.UserEntity;
 
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
-	UserEntity findUserEntityByUsernameAndPassword(String username, String password);
 
 	Boolean existsByUsername(String username);
 
