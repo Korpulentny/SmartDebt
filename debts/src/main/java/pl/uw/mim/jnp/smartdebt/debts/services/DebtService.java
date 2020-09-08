@@ -25,21 +25,21 @@ public class DebtService {
 		return DebtorHistoryDtoMapper.map(questionerUsername, debtorUsername, debts);
 	}
 
-	public void addNewDebt(String requesterUsername, String debtorUsername, BigDecimal amount, Boolean isRequesterOwned) {
+	public void addNewDebt(String requesterUsername, String debtorUsername, BigDecimal amount, Boolean isRequesterOwed) {
 		debtorService.isDebtor(requesterUsername, debtorUsername);
 		Date date = new Date();
 		DebtEntity debtOne = DebtEntity.builder()
 				.firstUsername(requesterUsername)
 				.secondUsername(debtorUsername)
 				.amount(amount)
-				.isFirstOwed(isRequesterOwned)
+				.isFirstOwed(isRequesterOwed)
 				.creationTimestamp(date)
 				.build();
 		DebtEntity debtTwo = DebtEntity.builder()
 				.firstUsername(debtorUsername)
 				.secondUsername(requesterUsername)
 				.amount(amount)
-				.isFirstOwed(!isRequesterOwned)
+				.isFirstOwed(!isRequesterOwed)
 				.creationTimestamp(date)
 				.build();
 		debtRepository.saveAll(Arrays.asList(debtOne, debtTwo));

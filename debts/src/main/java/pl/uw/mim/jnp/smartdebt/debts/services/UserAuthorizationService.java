@@ -2,7 +2,6 @@ package pl.uw.mim.jnp.smartdebt.debts.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
-import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import pl.uw.mim.jnp.smartdebt.debts.models.constants.Constants;

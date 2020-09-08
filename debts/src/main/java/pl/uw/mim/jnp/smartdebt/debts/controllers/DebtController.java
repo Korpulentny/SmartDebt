@@ -35,8 +35,8 @@ public class DebtController {
 
 	@PostMapping("/debt")
 	public void addNewDebt(@RequestParam String requesterUsername, @RequestParam String debtorUsername,
-			@RequestParam BigDecimal amount, @RequestParam Boolean isRequesterOwned) {
-		addNewDebt.execute(requesterUsername, debtorUsername, amount, isRequesterOwned);
+			@RequestParam BigDecimal amount, @RequestParam Boolean isRequesterOwed) {
+		addNewDebt.execute(requesterUsername, debtorUsername, amount, isRequesterOwed);
 	}
 
 	@PostMapping("/debtor")
