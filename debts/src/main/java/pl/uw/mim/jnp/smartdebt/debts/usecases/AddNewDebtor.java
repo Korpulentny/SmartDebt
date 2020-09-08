@@ -9,7 +9,7 @@ import pl.uw.mim.jnp.smartdebt.debts.services.DebtorService;
 @AllArgsConstructor
 public class AddNewDebtor {
 	DebtorService debtorService;
-	public void execute(Long userId, Long debtorId){
-		debtorService.addNewDebtor(userId, debtorId);
+	public void execute(String username, String debtorUsername){
+		debtorService.addNewDebtor(username, debtorUsername);
 	}
 }

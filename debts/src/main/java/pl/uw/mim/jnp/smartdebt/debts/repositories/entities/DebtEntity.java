@@ -20,10 +20,10 @@ public class DebtEntity {
 	private Long id;
 
 	@Column(name = "FIRST_USER_ID")
-	private Long firstUserId;
+	private String firstUsername;
 
 	@Column(name = "SECOND_USER_ID")
-	private Long secondUserId;
+	private String secondUsername;
 
 	@Column(name = "IS_FIRST_OWED")
 	private Boolean isFirstOwed;

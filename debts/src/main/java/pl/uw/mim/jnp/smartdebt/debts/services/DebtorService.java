@@ -11,17 +11,17 @@ import pl.uw.mim.jnp.smartdebt.debts.repositories.entities.DebtorEntity;
 public class DebtorService {
 	DebtorRepository debtorRepository;
 
-	public void addNewDebtor(Long requesterId, Long debtorId) {
-		DebtorEntity debtor = debtorRepository.findByUserIdAndDebtorId(requesterId, debtorId)
+	public void addNewDebtor(String requesterUsername, String debtorUsername) {
+		DebtorEntity debtor = debtorRepository.findByUsernameAndDebtorUsername(requesterUsername, debtorUsername)
 				.orElse(DebtorEntity.builder()
-						.userId(requesterId)
-						.debtorId(debtorId)
+						.username(requesterUsername)
+						.debtorUsername(debtorUsername)
 						.build());
 		debtorRepository.save(debtor);
 	}
 
-	public void isDebtor(Long requesterId, Long debtorId) {
-		debtorRepository.findByUserIdAndDebtorId(requesterId, debtorId).orElseThrow(NoSuchDebtorException::new);
+	public void isDebtor(String requesterUsername, String debtorUsername) {
+		debtorRepository.findByUsernameAndDebtorUsername(requesterUsername, debtorUsername).orElseThrow(NoSuchDebtorException::new);
 	}
 
 

@@ -19,7 +19,7 @@ public class DebtorEntity {
 	@GeneratedValue
 	private Long id;
 
-	private Long userId;
+	private String username;
 
-	private Long debtorId;
+	private String debtorUsername;
 }

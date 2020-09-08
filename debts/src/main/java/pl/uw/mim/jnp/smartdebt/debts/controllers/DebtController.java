@@ -35,8 +35,8 @@ public class DebtController {
 	}
 
 	@PostMapping("/debtor")
-	public void addNewDebtor(@RequestParam Long requesterId, @RequestParam Long debtorId) {
-		addNewDebtor.execute(requesterId, debtorId);
+	public void addNewDebtor(@RequestParam String requesterUsername, @RequestParam String debtorUsername) {
+		addNewDebtor.execute(requesterUsername, debtorUsername);
 	}
 
 }

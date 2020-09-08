@@ -12,8 +12,8 @@ public class AddNewDebt {
 
 	DebtService debtService;
 
-	public void execute(Long requesterId, Long debtorId, BigDecimal amount, Boolean isRequesterOwned) {
-		debtService.addNewDebt(requesterId, debtorId, amount, isRequesterOwned);
+	public void execute(Long requesterId, Long debtorId, BigDecimal amount, Boolean isRequesterOwed) {
+		debtService.addNewDebt(requesterId, debtorId, amount, isRequesterOwed);
 	}
 
 }
