@@ -19,10 +19,10 @@ public class DebtEntity {
 	@GeneratedValue
 	private Long id;
 
-	@Column(name = "FIRST_USER_ID")
+	@Column(name = "FIRST_USERNAME")
 	private String firstUsername;
 
-	@Column(name = "SECOND_USER_ID")
+	@Column(name = "SECOND_USERNAME")
 	private String secondUsername;
 
 	@Column(name = "IS_FIRST_OWED")

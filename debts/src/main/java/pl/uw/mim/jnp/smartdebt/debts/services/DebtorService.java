@@ -6,6 +6,8 @@ import pl.uw.mim.jnp.smartdebt.debts.exceptions.NoSuchDebtorException;
 import pl.uw.mim.jnp.smartdebt.debts.repositories.DebtorRepository;
 import pl.uw.mim.jnp.smartdebt.debts.repositories.entities.DebtorEntity;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class DebtorService {
@@ -24,5 +26,7 @@ public class DebtorService {
 		debtorRepository.findByUsernameAndDebtorUsername(requesterUsername, debtorUsername).orElseThrow(NoSuchDebtorException::new);
 	}
 
-
+	public List<DebtorEntity> getUserDebtors(String requesterUsername) {
+		return debtorRepository.findAllByUsername(requesterUsername);
+	}
 }

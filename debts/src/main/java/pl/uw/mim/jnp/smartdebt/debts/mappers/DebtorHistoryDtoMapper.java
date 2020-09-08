@@ -8,10 +8,10 @@ import java.util.List;
 
 @UtilityClass
 public class DebtorHistoryDtoMapper {
-	public DebtorHistoryDto map (Long questionerId, Long debtorId, List<DebtEntity> debtEntities){
+	public DebtorHistoryDto map (String questionerUsername, String debtorUsername, List<DebtEntity> debtEntities){
 		return DebtorHistoryDto.builder()
-				.questionerId(questionerId)
-				.debtorId(debtorId)
+				.questionerUsername(questionerUsername)
+				.debtorUsername(debtorUsername)
 				.totalAmount(TotalDebtAmountMapper.map(debtEntities))
 				.debts(DebtDtoListMapper.map(debtEntities))
 				.build();

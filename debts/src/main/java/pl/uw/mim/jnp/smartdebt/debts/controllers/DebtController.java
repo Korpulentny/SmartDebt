@@ -8,8 +8,10 @@ import pl.uw.mim.jnp.smartdebt.debts.models.debtHistory.DebtorHistoryDto;
 import pl.uw.mim.jnp.smartdebt.debts.usecases.AddNewDebt;
 import pl.uw.mim.jnp.smartdebt.debts.usecases.AddNewDebtor;
 import pl.uw.mim.jnp.smartdebt.debts.usecases.GetDebtorHistory;
+import pl.uw.mim.jnp.smartdebt.debts.usecases.GetDebtorsList;
 
 import java.math.BigDecimal;
+import java.net.http.HttpResponse;
 
 @RestController
 public class DebtController {
@@ -23,20 +25,28 @@ public class DebtController {
 	@Autowired
 	private AddNewDebtor addNewDebtor;
 
+	@Autowired
+	private GetDebtorsList getDebtorsList;
+
 	@GetMapping("/history")
-	public DebtorHistoryDto getDebtorHistory(@RequestParam Long questionerId, @RequestParam Long debtorId) {
-		return getDebtorHistory.execute(questionerId, debtorId);
+	public DebtorHistoryDto getDebtorHistory(@RequestParam String requesterUsername, @RequestParam String debtorUsername) {
+		return getDebtorHistory.execute(requesterUsername, debtorUsername);
 	}
 
 	@PostMapping("/debt")
-	public void addNewDebt(@RequestParam Long requesterId, @RequestParam Long debtorId,
+	public void addNewDebt(@RequestParam String requesterUsername, @RequestParam String debtorUsername,
 			@RequestParam BigDecimal amount, @RequestParam Boolean isRequesterOwned) {
-		addNewDebt.execute(requesterId, debtorId, amount, isRequesterOwned);
+		addNewDebt.execute(requesterUsername, debtorUsername, amount, isRequesterOwned);
 	}
 
 	@PostMapping("/debtor")
 	public void addNewDebtor(@RequestParam String requesterUsername, @RequestParam String debtorUsername) {
 		addNewDebtor.execute(requesterUsername, debtorUsername);
+	}
+
+	@GetMapping("/debtor-list")
+	public ResponseEntity<?> getDebtorsList(@RequestParam String requesterUsername) {
+		return ResponseEntity.ok(getDebtorsList.execute(requesterUsername));
 	}
 
 }

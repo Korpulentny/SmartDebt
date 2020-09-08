@@ -10,7 +10,7 @@ import pl.uw.mim.jnp.smartdebt.debts.services.DebtService;
 public class GetDebtorHistory {
 	DebtService debtService;
 
-	public DebtorHistoryDto execute(Long questionerId, Long debtorId) {
-		return debtService.getDebtorHistory(questionerId, debtorId);
+	public DebtorHistoryDto execute(String questionerUsername, String debtorUsername) {
+		return debtService.getDebtorHistory(questionerUsername, debtorUsername);
 	}
 }

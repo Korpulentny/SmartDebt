@@ -20,9 +20,9 @@ public class DebtService {
 
 	DebtorService debtorService;
 
-	public DebtorHistoryDto getDebtorHistory(Long questionerId, Long debtorId) {
-		List<DebtEntity> debts = debtRepository.findAllByFirstUserIdAndSecondUserIdOrderByCreationTimestampDesc(questionerId, debtorId);
-		return DebtorHistoryDtoMapper.map(questionerId, debtorId, debts);
+	public DebtorHistoryDto getDebtorHistory(String questionerUsername, String debtorUsername) {
+		List<DebtEntity> debts = debtRepository.findAllByFirstUsernameAndSecondUsernameOrderByCreationTimestampDesc(questionerUsername, debtorUsername);
+		return DebtorHistoryDtoMapper.map(questionerUsername, debtorUsername, debts);
 	}
 
 	public void addNewDebt(String requesterUsername, String debtorUsername, BigDecimal amount, Boolean isRequesterOwned) {
