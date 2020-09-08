@@ -23,7 +23,7 @@ public class UserController {
 		return ResponseEntity.ok(registerNewUser.execute(userDto));
 	}
 
-	@PostMapping("/user-exists")
+	@GetMapping("/user-exists")
 	ResponseEntity<?> assertUserExists(@RequestParam String username) {
 		return ResponseEntity.ok(assertUserExists.execute(username));
 	}

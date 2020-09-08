@@ -15,7 +15,6 @@ import pl.uw.mim.jnp.smartdebt.users.repositories.entities.UserEntity;
 
 import java.util.Collections;
 
-
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
