@@ -1,18 +1,29 @@
 <template>
-  <v-app>
-    <v-toolbar app color="blue-grey darken-3" dark>
-      <v-btn flat to="/debtors">Debtors</v-btn>
-      <v-btn flat to="/debts">Debts</v-btn>
-      <v-btn flat to="/login">Login</v-btn>
-      <v-btn flat>Logout</v-btn>
-      <v-btn flat to="/register">Register</v-btn>
-    </v-toolbar>
-  </v-app>
+    <v-app-bar color="blue-grey darken-3" dark app>
+      <v-btn to="/debtors">Debtors</v-btn>
+      <v-btn to="/debtor">Debts</v-btn>
+      <v-spacer></v-spacer>
+      <v-btn to="/login">Login</v-btn>
+      <v-btn @click="handleLogout">Logout</v-btn>
+      <v-btn to="/register">Register</v-btn>
+    </v-app-bar>
 </template>
 
 <script>
 export default {
   name: "AppNavigation",
+  methods: {
+    handleLogout() {
+        this.$store.dispatch("auth/logout", this.user).then(
+            () => {
+              this.$router.push("/login");
+            },
+            error => {
+              console.log(error);
+            },
+        );
+    },
+  },
 };
 </script>
 

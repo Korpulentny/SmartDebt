@@ -12,22 +12,16 @@ class DebtsService {
 			})
 			.then(successResponse => {
 				return successResponse;
-			})
-			.catch(errorResponse => {
-				return {};
 			});
 	}
 
 	getDebtorList(user) {
 		return axios
-			.get(DEBTS_SERVICE_URL + "debtor-list?requesterId=" + user.username, {
+			.get(DEBTS_SERVICE_URL + "debtor-list?requesterUsername=" + user.username, {
 				headers: AuthorizationService.jwtHeader(),
 			})
 			.then(successResponse => {
 				return successResponse;
-			})
-			.catch(errorResponse => {
-				return {};
 			});
 	}
 
@@ -39,9 +33,6 @@ class DebtsService {
 			})
 			.then(successResponse => {
 				return successResponse;
-			})
-			.catch(errorResponse => {
-				return {};
 			});
 	}
 
@@ -53,9 +44,6 @@ class DebtsService {
 			})
 			.then(successResponse => {
 				return successResponse;
-			})
-			.catch(errorResponse => {
-				return {};
 			});
 	}
 }

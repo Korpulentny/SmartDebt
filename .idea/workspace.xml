@@ -20,20 +20,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="008b10a1-be6b-4003-8903-0082b7f281e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/front/src/components/AppNavigation.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/views/DebtorView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/views/DebtorsView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/views/LoginView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/views/RegisterView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/vue.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debts/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debts/src/main/resources/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/components/NewDebtorDialog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/src/main/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/controllers/DebtController.java" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/controllers/DebtController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debts/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debts/src/main/resources/schema_postgres.sql" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/resources/schema_postgres.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/AppNavigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/AppNavigation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/HelloWorld.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/services/authentication.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/services/authentication.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/services/debts.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/services/debts.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/views/DebtorView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/DebtorView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/views/DebtorsView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/DebtorsView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/views/LoginView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/LoginView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/views/RegisterView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/RegisterView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/configuration/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/configuration/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/models/jwt/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/models/jwt/JwtResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/services/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/services/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/src/main/resources/schema_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/resources/schema_users.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +61,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -99,7 +117,9 @@
       <workItem from="1599759595370" duration="599000" />
       <workItem from="1599807084284" duration="30000" />
       <workItem from="1599916639905" duration="600000" />
-      <workItem from="1600070749182" duration="7488000" />
+      <workItem from="1600070749182" duration="12294000" />
+      <workItem from="1600096045549" duration="8277000" />
+      <workItem from="1600109356836" duration="9505000" />
     </task>
     <servers />
   </component>
@@ -119,35 +139,40 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="454" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599254798953">
+    <state x="454" y="211" width="1084" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600096327171">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="454" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1599254798953" />
+    <state x="454" y="211" width="1084" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600096327171" />
+    <state x="728" y="358" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1600096303028">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="728" y="358" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600096303028" />
     <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1599255415593">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1599255415593" />
-    <state x="172" y="127" width="1648" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600088686380">
+    <state x="172" y="127" width="1648" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600090628779">
       <screen x="72" y="27" width="2383" height="2133" />
     </state>
-    <state x="172" y="127" width="1648" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog/72.27.2383.2133@72.27.2383.2133" timestamp="1600088686380" />
-    <state x="865" y="564" width="922" height="1058" key="find.popup" timestamp="1600085739690">
-      <screen x="72" y="27" width="2383" height="2133" />
+    <state x="172" y="127" width="1648" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog/72.27.2383.2133@72.27.2383.2133" timestamp="1600090628779" />
+    <state x="687" y="250" width="715" height="830" key="find.popup" timestamp="1600111105095">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="687" y="292" width="715" height="522" key="find.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1599697327461" />
-    <state x="865" y="564" width="922" height="1058" key="find.popup/72.27.2383.2133@72.27.2383.2133" timestamp="1600085739690" />
-    <state x="916" y="1137" width="1372" height="803" key="new project wizard" timestamp="1599674886630">
-      <screen x="535" y="1080" width="1920" height="1080" />
+    <state x="687" y="250" width="715" height="830" key="find.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600111105095" />
+    <state x="865" y="564" width="922" height="1058" key="find.popup/72.27.2383.2133@72.27.2383.2133" timestamp="1600093559412" />
+    <state x="72" y="183" width="1372" height="803" key="new project wizard" timestamp="1600113950282">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="916" y="1137" key="new project wizard/72.27.1848.1053/535.1080.1920.1080@535.1080.1920.1080" timestamp="1599674886630" />
-    <state x="439" y="83" width="1372" height="803" key="new project wizard/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1599255428352" />
-    <state x="660" y="252" key="run.anything.popup" timestamp="1600088302120">
-      <screen x="72" y="27" width="2383" height="2133" />
+    <state x="72" y="183" width="1372" height="803" key="new project wizard/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600113950282" />
+    <state x="528" y="138" key="run.anything.popup" timestamp="1600115910596">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
+    <state x="528" y="138" key="run.anything.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600115910596" />
     <state x="660" y="252" key="run.anything.popup/72.27.2383.2133@72.27.2383.2133" timestamp="1600088302120" />
-    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1600088617453">
+    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1600090205836">
       <screen x="72" y="27" width="2383" height="2133" />
     </state>
-    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup/72.27.2383.2133@72.27.2383.2133" timestamp="1600088617453" />
+    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup/72.27.2383.2133@72.27.2383.2133" timestamp="1600090205836" />
   </component>
 </project>

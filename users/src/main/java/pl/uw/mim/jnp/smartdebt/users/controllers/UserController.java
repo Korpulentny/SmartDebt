@@ -10,6 +10,7 @@ import pl.uw.mim.jnp.smartdebt.users.usecases.RegisterNewUser;
 
 @RestController
 @RequestMapping
+@CrossOrigin
 public class UserController {
 
 	@Autowired

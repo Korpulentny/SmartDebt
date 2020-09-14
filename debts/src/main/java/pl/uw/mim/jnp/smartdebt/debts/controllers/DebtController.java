@@ -14,6 +14,7 @@ import java.math.BigDecimal;
 import java.net.http.HttpResponse;
 
 @RestController
+@CrossOrigin
 public class DebtController {
 
 	@Autowired

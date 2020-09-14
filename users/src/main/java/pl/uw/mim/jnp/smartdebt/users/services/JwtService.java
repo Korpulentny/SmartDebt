@@ -24,6 +24,7 @@ public class JwtService {
 		authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
 		final UserDetails userDetails = userDetailsService.loadUserByUsername(authenticationRequest.getUsername());
 		return JwtResponse.builder()
+				.username(userDetails.getUsername())
 				.jwt(JwtTokenUtil.generateJwt(userDetails))
 				.build();
 	}

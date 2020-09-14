@@ -5,6 +5,8 @@ const USER_SERVICE_URL = "http://localhost:1327/";
 class AuthenticationService {
 	jwtHeader() {
 		let user = JSON.parse(localStorage.getItem("user"));
+		console.log("DUPCIA");
+		console.log(user);
 		if (user !== null && user.jwt !== null) {
 			return {Authorization: "Bearer " + user.jwt};
 		} else {

@@ -1,0 +1,37 @@
+version: '3.4'
+
+services:
+
+    debts:
+        build: debts/
+        ports:
+            - "2371:2371"
+        depends_on:
+            - psql-debts-debts
+
+    users:
+        build: users/
+        ports:
+            - "1327:1327"
+        depends_on:
+            - psql-debts-users
+
+
+    front_app:
+        build: front/
+        ports:
+            - "2137:2137"
+
+    psql-debts-debts:
+        image: postgres:latest
+        ports:
+            - "3721:5432"
+        environment:
+            POSTGRES_PASSWORD: password
+
+    psql-debts-users:
+        image: postgres:latest
+        ports:
+            - "3172:5432"
+        environment:
+            POSTGRES_PASSWORD: password
