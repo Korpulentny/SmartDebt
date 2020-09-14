@@ -8,7 +8,7 @@ class AuthenticationService {
 		if (user !== null && user.jwt !== null) {
 			return {Authorization: "Bearer " + user.jwt};
 		} else {
-			return {};
+			return false;
 		}
 	}
 
@@ -35,6 +35,17 @@ class AuthenticationService {
 			password: user.password,
 		});
 	}
+	// authorize() {
+	// 	return axios.post(USER_SERVICE_URL + "authorize", {
+	// 		headers: this.jwtHeader(),
+	// 	})
+	// 		.then(successResponse => {
+	// 			return true;
+	// 		})
+	// 		.catch(errorResponse => {
+	// 			return false;
+	// 		});
+	// }
 }
 
 export default new AuthenticationService();

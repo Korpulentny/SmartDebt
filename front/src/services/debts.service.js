@@ -58,6 +58,6 @@ class DebtsService {
 				return {};
 			});
 	}
-
-
 }
+
+export default new DebtsService();
