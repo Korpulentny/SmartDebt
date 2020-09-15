@@ -8,7 +8,7 @@
             v-bind="attrs"
             v-on="on"
         >
-          Dodaj Dłużnika
+          Dodaj Dług
         </v-btn>
       </template>
       <v-card>
@@ -19,7 +19,13 @@
           <v-container>
             <v-row>
               <v-col cols="12" sm="6" md="4">
-                <v-text-field label="Debtor username" required v-model="debtor"></v-text-field>
+                <v-text-field label="Wartość długu" required v-model="amount"></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6" md="4">
+                <v-switch
+                    v-model="isRequesterOwned"
+                    :label="isRequesterOwned?'ty płaciłeś':'on płacił'"
+                ></v-switch>
               </v-col>
             </v-row>
           </v-container>
@@ -38,16 +44,15 @@
 import DebtsService from "../services/debts.service";
 
 export default {
-  name: "NewDebtorDialog",
+  name: "NewDebtDialog",
   data() {
     return {
-      debtor: null,
+      amount: null,
       dialog: false,
+      isRequesterOwned: true,
     };
   },
-  props: {
-    username: String,
-  },
+  props: {},
   computed: {
     currentUser() {
       return this.$store.state.auth.user;
@@ -63,7 +68,7 @@ export default {
         console.log("APOKALIPSA");
         this.$router.push("/login");
       } else {
-        DebtsService.addDebtor(this.currentUser, this.debtor).then(
+        DebtsService.addDebt(this.currentUser, this.$route.params.username, this.amount, this.isRequesterOwned).then(
             () => {
               console.log("SW JANA");
               this.$router.push("/debtors");

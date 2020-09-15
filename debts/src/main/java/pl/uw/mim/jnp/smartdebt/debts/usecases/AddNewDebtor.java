@@ -11,5 +11,6 @@ public class AddNewDebtor {
 	DebtorService debtorService;
 	public void execute(String username, String debtorUsername){
 		debtorService.addNewDebtor(username, debtorUsername);
+
 	}
 }

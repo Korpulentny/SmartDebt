@@ -1,7 +1,10 @@
 import axios from "axios";
 import AuthorizationService from "./authentication.service";
 
+
 const DEBTS_SERVICE_URL = "http://localhost:2371/";
+
+const RABBIT_SERVICE_URL = "http://localhost:7111/";
 
 class DebtsService {
 	getDebtorHistory(user, debtor) {
@@ -16,6 +19,8 @@ class DebtsService {
 	}
 
 	getDebtorList(user) {
+		console.log(user);
+		console.log(user.username);
 		return axios
 			.get(DEBTS_SERVICE_URL + "debtor-list?requesterUsername=" + user.username, {
 				headers: AuthorizationService.jwtHeader(),
@@ -26,21 +31,30 @@ class DebtsService {
 	}
 
 	addDebtor(user, debtor) {
+
+		console.log("BOMBELKI");
 		return axios
-			.post(DEBTS_SERVICE_URL + "debtor?requesterUsername=" +
-				user.username + "&debtorUsername=" + debtor, {
-				headers: AuthorizationService.jwtHeader(),
-			})
+			.post(DEBTS_SERVICE_URL + "debtor", {
+					requesterUsername: user.username,
+					debtorUsername: debtor,
+				},
+				{
+					headers: AuthorizationService.jwtHeader(),
+				},
+			)
 			.then(successResponse => {
 				return successResponse;
 			});
 	}
 
-	addDebt(user, debtor) {
+	addDebt(user, debtor, amount, isRequesterOwned) {
 		return axios
-			.post(DEBTS_SERVICE_URL + "debt?requesterUsername=" +
-				user.username + "&debtorUsername=" + debtor, {
-				headers: AuthorizationService.jwtHeader(),
+			.post(RABBIT_SERVICE_URL + "debt", {
+				// headers: AuthorizationService.jwtHeader(),
+				requesterUsername: user.username,
+				debtorUsername: debtor,
+				amount: amount,
+				isRequesterOwned: isRequesterOwned,
 			})
 			.then(successResponse => {
 				return successResponse;

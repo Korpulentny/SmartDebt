@@ -5,12 +5,19 @@ const USER_SERVICE_URL = "http://localhost:1327/";
 class AuthenticationService {
 	jwtHeader() {
 		let user = JSON.parse(localStorage.getItem("user"));
-		console.log("DUPCIA");
-		console.log(user);
 		if (user !== null && user.jwt !== null) {
 			return {Authorization: "Bearer " + user.jwt};
 		} else {
 			return false;
+		}
+	}
+
+	currentUser() {
+		let user = JSON.parse(localStorage.getItem("user"));
+		if (user !== null && user.jwt !== null) {
+			return (user.username);
+		} else {
+			return undefined;
 		}
 	}
 
@@ -23,6 +30,7 @@ class AuthenticationService {
 			.then(successResponse => {
 				if (successResponse.data.jwt) {
 					localStorage.setItem("user", JSON.stringify(successResponse.data));
+					console.log(localStorage.getItem("user"));
 				}
 			});
 	}
@@ -37,6 +45,7 @@ class AuthenticationService {
 			password: user.password,
 		});
 	}
+
 	// authorize() {
 	// 	return axios.post(USER_SERVICE_URL + "authorize", {
 	// 		headers: this.jwtHeader(),

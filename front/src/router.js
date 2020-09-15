@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import DebtorsView from './views/DebtorsView.vue';
 import LoginView from './views/LoginView.vue';
 import RegisterView from './views/RegisterView.vue';
 
@@ -10,13 +9,8 @@ const router = new Router({
 	mode: 'history',
 	routes: [
 		{
-			path: '/',
-			name: 'debtors',
-			component: DebtorsView
-		},
-		{
 			path: '/debtors',
-			component: DebtorsView
+			component: () => import('./views/DebtorsView.vue')
 		},
 		{
 			path: '/login',
@@ -27,7 +21,7 @@ const router = new Router({
 			component: RegisterView
 		},
 		{
-			path: '/debtor',
+			path: '/debtor/:username',
 			name: 'debtor',
 			// lazy-loaded
 			component: () => import('./views/DebtorView.vue')

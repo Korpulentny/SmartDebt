@@ -2,6 +2,7 @@ package pl.uw.mim.jnp.smartdebt.debts.controllers;
 
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.uw.mim.jnp.smartdebt.debts.models.debtHistory.DebtorHistoryDto;
@@ -14,7 +15,6 @@ import pl.uw.mim.jnp.smartdebt.debts.usecases.GetDebtorsList;
 import java.math.BigDecimal;
 import java.net.http.HttpResponse;
 
-@CrossOrigin
 @RestController
 public class DebtController {
 
@@ -40,12 +40,15 @@ public class DebtController {
 			@RequestParam BigDecimal amount, @RequestParam Boolean isRequesterOwed) {
 		addNewDebt.execute(requesterUsername, debtorUsername, amount, isRequesterOwed);
 	}
-
+	@CrossOrigin(origins = "http://localhost:2137")
 	@PostMapping("/debtor")
-	public void addNewDebtor(@RequestBody DebtorDto newDebtor) {
-		addNewDebtor.execute(newDebtor.getRequesterId(), newDebtor.getDebtorId());
+	public ResponseEntity<?> addNewDebtor(@RequestBody String requesterId, String debtorId) {
+//		addNewDebtor.execute(newDebtor.getRequesterId(), newDebtor.getDebtorId());
+		addNewDebtor.execute(requesterId, debtorId);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 
+	@CrossOrigin(origins = "http://localhost:2137")
 	@GetMapping("/debtor-list")
 	public ResponseEntity<?> getDebtorsList(@RequestParam String requesterUsername) {
 		return ResponseEntity.ok(getDebtorsList.execute(requesterUsername));

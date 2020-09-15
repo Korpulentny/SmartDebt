@@ -20,36 +20,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="008b10a1-be6b-4003-8903-0082b7f281e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/debts/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/debts/src/main/resources/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/components/NewDebtorDialog.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/src/main/resources/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/configurations/RabbitConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/models/newDebt/NewDebtDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/rabbitmessaging/Receiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/components/NewDebtDialog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_server/src/main/java/pl/uw/mim/jnp/smartebt/front_server/controllers/RabbitMessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_server/src/main/java/pl/uw/mim/jnp/smartebt/front_server/models/dto/CustomMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_server/src/main/java/pl/uw/mim/jnp/smartebt/front_server/models/dto/NewDebtDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_server/src/main/java/pl/uw/mim/jnp/smartebt/front_server/services/RabbitManagementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_server/src/main/java/pl/uw/mim/jnp/smartebt/front_server/usecases/AddDebt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/debts/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/configurations/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/configurations/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/controllers/DebtController.java" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/controllers/DebtController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/models/newDebt/newDebtDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/models/newDebtor/DebtorDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/models/newDebtor/DebtorDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/usecases/AddNewDebtor.java" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/usecases/AddNewDebtor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/debts/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/debts/src/main/resources/schema_postgres.sql" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/resources/schema_postgres.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/AppNavigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/AppNavigation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/HelloWorld.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/NewDebtorDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/NewDebtorDialog.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/services/authentication.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/services/authentication.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/services/debts.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/services/debts.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/store/auth.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/store/auth.module.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/views/DebtorView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/DebtorView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/views/DebtorsView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/DebtorsView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/views/LoginView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/LoginView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/RegisterView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/RegisterView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/vue.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/configuration/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/configuration/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/models/jwt/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/models/jwt/JwtResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/services/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/services/JwtService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/src/main/resources/schema_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/resources/schema_users.sql" afterDir="false" />
     </list>
@@ -87,20 +83,8 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -119,7 +103,11 @@
       <workItem from="1599916639905" duration="600000" />
       <workItem from="1600070749182" duration="12294000" />
       <workItem from="1600096045549" duration="8277000" />
-      <workItem from="1600109356836" duration="9505000" />
+      <workItem from="1600109356836" duration="9603000" />
+      <workItem from="1600158089608" duration="2419000" />
+      <workItem from="1600163700018" duration="7667000" />
+      <workItem from="1600173793756" duration="8019000" />
+      <workItem from="1600190769008" duration="2043000" />
     </task>
     <servers />
   </component>
@@ -155,24 +143,26 @@
       <screen x="72" y="27" width="2383" height="2133" />
     </state>
     <state x="172" y="127" width="1648" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog/72.27.2383.2133@72.27.2383.2133" timestamp="1600090628779" />
-    <state x="687" y="250" width="715" height="830" key="find.popup" timestamp="1600111105095">
+    <state x="799" y="217" width="735" height="830" key="find.popup" timestamp="1600191088869">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="687" y="250" width="715" height="830" key="find.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600111105095" />
+    <state x="1174" y="1308" width="743" height="852" key="find.popup/72.27.1848.1053/535.1080.1920.1080@535.1080.1920.1080" timestamp="1600168943231" />
+    <state x="799" y="217" width="735" height="830" key="find.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600191088869" />
     <state x="865" y="564" width="922" height="1058" key="find.popup/72.27.2383.2133@72.27.2383.2133" timestamp="1600093559412" />
-    <state x="72" y="183" width="1372" height="803" key="new project wizard" timestamp="1600113950282">
-      <screen x="72" y="27" width="1848" height="1053" />
+    <state x="762" y="1209" width="1372" height="803" key="new project wizard" timestamp="1600186856002">
+      <screen x="535" y="1080" width="1920" height="1080" />
     </state>
     <state x="916" y="1137" key="new project wizard/72.27.1848.1053/535.1080.1920.1080@535.1080.1920.1080" timestamp="1599674886630" />
-    <state x="72" y="183" width="1372" height="803" key="new project wizard/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600113950282" />
+    <state x="762" y="1209" width="1372" height="803" key="new project wizard/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600186856002" />
     <state x="528" y="138" key="run.anything.popup" timestamp="1600115910596">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="528" y="138" key="run.anything.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600115910596" />
     <state x="660" y="252" key="run.anything.popup/72.27.2383.2133@72.27.2383.2133" timestamp="1600088302120" />
-    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1600090205836">
-      <screen x="72" y="27" width="2383" height="2133" />
+    <state x="527" y="142" width="672" height="335" key="search.everywhere.popup" timestamp="1600190811120">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
+    <state x="527" y="142" width="672" height="335" key="search.everywhere.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600190811120" />
     <state x="659" y="259" width="672" height="678" key="search.everywhere.popup/72.27.2383.2133@72.27.2383.2133" timestamp="1600090205836" />
   </component>
 </project>

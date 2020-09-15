@@ -32,7 +32,7 @@
             <v-spacer></v-spacer>
             <v-btn
                 color="blue-grey"
-                :disabled="!valid"
+                :disabled="!valid && !loading"
                 @click="submit"
             >Login
             </v-btn
@@ -52,6 +52,7 @@ export default {
     return {
       valid: false,
       user: new User("", ""),
+      loading: false,
       usernameRules: [
         v => !!v || "Username is required",
       ],
@@ -71,16 +72,20 @@ export default {
     }
   },
   methods: {
-    submit() {
+    async submit() {
+      this.loading = true;
       if (this.$refs.form.validate()) {
-        this.$store.dispatch("auth/login", this.user).then(
+        await this.$store.dispatch("auth/login", this.user).then(
             () => {
               this.$router.push("/debtors");
             },
             error => {
+              this.loading = false;
               console.log(error);
             },
         );
+      } else {
+        this.loading = false;
       }
     },
   },
