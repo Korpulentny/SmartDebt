@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.uw.mim.jnp.smartdebt.debts.models.debtHistory.DebtorHistoryDto;
+import pl.uw.mim.jnp.smartdebt.debts.models.newDebtor.DebtorDto;
 import pl.uw.mim.jnp.smartdebt.debts.usecases.AddNewDebt;
 import pl.uw.mim.jnp.smartdebt.debts.usecases.AddNewDebtor;
 import pl.uw.mim.jnp.smartdebt.debts.usecases.GetDebtorHistory;
@@ -13,8 +14,8 @@ import pl.uw.mim.jnp.smartdebt.debts.usecases.GetDebtorsList;
 import java.math.BigDecimal;
 import java.net.http.HttpResponse;
 
-@RestController
 @CrossOrigin
+@RestController
 public class DebtController {
 
 	@Autowired
@@ -41,8 +42,8 @@ public class DebtController {
 	}
 
 	@PostMapping("/debtor")
-	public void addNewDebtor(@RequestParam String requesterUsername, @RequestParam String debtorUsername) {
-		addNewDebtor.execute(requesterUsername, debtorUsername);
+	public void addNewDebtor(@RequestBody DebtorDto newDebtor) {
+		addNewDebtor.execute(newDebtor.getRequesterId(), newDebtor.getDebtorId());
 	}
 
 	@GetMapping("/debtor-list")
