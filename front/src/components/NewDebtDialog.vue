@@ -65,16 +65,13 @@ export default {
   methods: {
     handleSave() {
       if (!this.loggedIn) {
-        console.log("APOKALIPSA");
         this.$router.push("/login");
       } else {
         DebtsService.addDebt(this.currentUser, this.$route.params.username, this.amount, this.isRequesterOwned).then(
             () => {
-              console.log("SW JANA");
               this.$router.push("/debtors");
             },
             error => {
-              console.log("ERROR");
               console.log(error);
             },
         );

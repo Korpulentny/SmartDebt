@@ -16,6 +16,7 @@ import java.math.BigDecimal;
 import java.net.http.HttpResponse;
 
 @RestController
+@CrossOrigin
 public class DebtController {
 
 	@Autowired
@@ -30,25 +31,28 @@ public class DebtController {
 	@Autowired
 	private GetDebtorsList getDebtorsList;
 
+	@CrossOrigin
 	@GetMapping("/history")
 	public DebtorHistoryDto getDebtorHistory(@RequestParam String requesterUsername, @RequestParam String debtorUsername) {
 		return getDebtorHistory.execute(requesterUsername, debtorUsername);
 	}
 
+	@CrossOrigin
 	@PostMapping("/debt")
 	public void addNewDebt(@RequestParam String requesterUsername, @RequestParam String debtorUsername,
 			@RequestParam BigDecimal amount, @RequestParam Boolean isRequesterOwed) {
 		addNewDebt.execute(requesterUsername, debtorUsername, amount, isRequesterOwed);
 	}
-	@CrossOrigin(origins = "http://localhost:2137")
+	@CrossOrigin
 	@PostMapping("/debtor")
-	public ResponseEntity<?> addNewDebtor(@RequestBody String requesterId, String debtorId) {
-//		addNewDebtor.execute(newDebtor.getRequesterId(), newDebtor.getDebtorId());
-		addNewDebtor.execute(requesterId, debtorId);
+	public ResponseEntity<?> addNewDebtor(@RequestBody DebtorDto newDebtor) {
+		DebtorDto debtor = newDebtor;
+		addNewDebtor.execute(debtor.getRequesterUsername(), debtor.getDebtorUsername());
+//		addNewDebtor.execute(requesterId, debtorId);
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 
-	@CrossOrigin(origins = "http://localhost:2137")
+	@CrossOrigin
 	@GetMapping("/debtor-list")
 	public ResponseEntity<?> getDebtorsList(@RequestParam String requesterUsername) {
 		return ResponseEntity.ok(getDebtorsList.execute(requesterUsername));

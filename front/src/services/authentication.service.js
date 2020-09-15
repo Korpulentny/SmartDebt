@@ -30,7 +30,6 @@ class AuthenticationService {
 			.then(successResponse => {
 				if (successResponse.data.jwt) {
 					localStorage.setItem("user", JSON.stringify(successResponse.data));
-					console.log(localStorage.getItem("user"));
 				}
 			});
 	}

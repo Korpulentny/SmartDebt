@@ -60,16 +60,14 @@ export default {
   methods: {
     handleSave() {
       if (!this.loggedIn) {
-        console.log("APOKALIPSA");
         this.$router.push("/login");
       } else {
         DebtsService.addDebtor(this.currentUser, this.debtor).then(
             () => {
-              console.log("SW JANA");
-              this.$router.push("/debtors");
+              this.dialog=false;
+              this.$router.push("/login");
             },
             error => {
-              console.log("ERROR");
               console.log(error);
             },
         );

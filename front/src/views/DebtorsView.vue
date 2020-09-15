@@ -46,13 +46,10 @@ export default {
   },
 
   created() {
-    // fetch the data when the view is created and the data is
-    // already being observed
     this.fetchData();
 
   },
   watch: {
-    // call again the method if the route changes
     "$route": "fetchData",
   },
   methods: {
@@ -60,12 +57,9 @@ export default {
       if (!this.loggedIn) {
         this.$router.push("/login");
       } else {
-        console.log("lista");
-        console.log(this.currentUser);
         DebtsService.getDebtorList(this.currentUser).then(
             successResponse => {
               this.debtors = successResponse.data;
-              console.log(this.debtors);
             },
             errorResponse => {
               console.log(errorResponse);

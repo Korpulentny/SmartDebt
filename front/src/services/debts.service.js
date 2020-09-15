@@ -19,8 +19,6 @@ class DebtsService {
 	}
 
 	getDebtorList(user) {
-		console.log(user);
-		console.log(user.username);
 		return axios
 			.get(DEBTS_SERVICE_URL + "debtor-list?requesterUsername=" + user.username, {
 				headers: AuthorizationService.jwtHeader(),
@@ -31,8 +29,6 @@ class DebtsService {
 	}
 
 	addDebtor(user, debtor) {
-
-		console.log("BOMBELKI");
 		return axios
 			.post(DEBTS_SERVICE_URL + "debtor", {
 					requesterUsername: user.username,

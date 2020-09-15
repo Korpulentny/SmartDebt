@@ -86,7 +86,6 @@ export default {
         DebtsService.getDebtorHistory(this.currentUser, this.$route.params.username).then(
             successResponse => {
               this.debtorHistory = successResponse.data;
-              console.log(this.debtorHistory);
             },
             errorResponse => {
               console.log(errorResponse);

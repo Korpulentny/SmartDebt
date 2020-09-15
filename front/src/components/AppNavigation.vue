@@ -1,7 +1,6 @@
 <template>
     <v-app-bar color="blue-grey darken-3" dark app>
       <v-btn to="/debtors">Debtors</v-btn>
-      <v-btn to="/debtor">Debts</v-btn>
       <v-spacer></v-spacer>
       <v-btn to="/login">Login</v-btn>
       <v-btn @click="handleLogout">Logout</v-btn>

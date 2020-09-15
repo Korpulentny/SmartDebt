@@ -32,40 +32,39 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
 		String username = null;
 		String jwtToken = null;
-		// JWT Token is in the form "Bearer token". Remove Bearer word and get
-		// only the Token
 		if (requestTokenHeader != null && requestTokenHeader.startsWith("Bearer ")) {
 			jwtToken = requestTokenHeader.substring(7);
-			try {
-				username = JwtTokenUtil.getUsernameFromJwt(jwtToken);
-			} catch (IllegalArgumentException e) {
-				System.out.println("Unable to get JWT Token");
-			} catch (ExpiredJwtException e) {
-				System.out.println("JWT Token has expired");
-			}
+			username = getUsername(jwtToken);
 		} else {
 			logger.warn("JWT Token does not begin with Bearer String");
 		}
+		validateToken(request, username, jwtToken);
+		chain.doFilter(request, response);
+	}
 
-		// Once we get the token validate it.
+	private String getUsername(String jwtToken) {
+		String username = null;
+		try {
+			username = JwtTokenUtil.getUsernameFromJwt(jwtToken);
+		} catch (IllegalArgumentException e) {
+			System.out.println("Unable to get JWT Token");
+		} catch (ExpiredJwtException e) {
+			System.out.println("JWT Token has expired");
+		}
+		return username;
+	}
+
+	private void validateToken(HttpServletRequest request, String username, String jwtToken) {
 		if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-
 			UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
-
-			// if token is valid configure Spring Security to manually set
-			// authentication
 			if (JwtTokenUtil.validateToken(jwtToken, userDetails)) {
 
 				UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
 						userDetails, null, userDetails.getAuthorities());
 				usernamePasswordAuthenticationToken
 						.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-				// After setting the Authentication in the context, we specify
-				// that the current user is authenticated. So it passes the
-				// Spring Security Configurations successfully.
 				SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
 			}
 		}
-		chain.doFilter(request, response);
 	}
 }
