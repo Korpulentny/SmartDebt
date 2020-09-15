@@ -20,21 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="008b10a1-be6b-4003-8903-0082b7f281e9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/front_server/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/debts/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/configurations/AuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/configurations/AuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/configurations/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/configurations/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/controllers/DebtController.java" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/controllers/DebtController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/models/newDebtor/DebtorDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/models/newDebtor/DebtorDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debts/src/main/resources/schema_postgres.sql" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/resources/schema_postgres.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debts/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/debts/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/components/AppNavigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/AppNavigation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/NewDebtDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/NewDebtDialog.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/NewDebtorDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/NewDebtorDialog.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/services/authentication.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/services/authentication.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/services/debts.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/services/debts.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/views/DebtorView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/DebtorView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/DebtorsView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/DebtorsView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/java/pl/uw/mim/jnp/smartdebt/users/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/users/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/src/main/resources/schema_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/resources/schema_users.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,6 +66,21 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -95,7 +102,7 @@
       <workItem from="1600158089608" duration="2419000" />
       <workItem from="1600163700018" duration="7667000" />
       <workItem from="1600173793756" duration="8019000" />
-      <workItem from="1600190769008" duration="3389000" />
+      <workItem from="1600190769008" duration="5210000" />
     </task>
     <servers />
   </component>
@@ -131,11 +138,11 @@
       <screen x="72" y="27" width="2383" height="2133" />
     </state>
     <state x="172" y="127" width="1648" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog/72.27.2383.2133@72.27.2383.2133" timestamp="1600090628779" />
-    <state x="799" y="217" width="735" height="830" key="find.popup" timestamp="1600200216513">
+    <state x="799" y="217" width="735" height="830" key="find.popup" timestamp="1600201152592">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="1174" y="1308" width="743" height="852" key="find.popup/72.27.1848.1053/535.1080.1920.1080@535.1080.1920.1080" timestamp="1600168943231" />
-    <state x="799" y="217" width="735" height="830" key="find.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600200216513" />
+    <state x="799" y="217" width="735" height="830" key="find.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600201152592" />
     <state x="865" y="564" width="922" height="1058" key="find.popup/72.27.2383.2133@72.27.2383.2133" timestamp="1600093559412" />
     <state x="762" y="1209" width="1372" height="803" key="new project wizard" timestamp="1600186856002">
       <screen x="535" y="1080" width="1920" height="1080" />

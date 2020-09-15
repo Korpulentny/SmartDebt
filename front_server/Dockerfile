@@ -1,7 +1,7 @@
 
 FROM adoptopenjdk/maven-openjdk11
 
-WORKDIR /users
+WORKDIR /front_server
 
 COPY src/ src
 COPY pom.xml pom.xml

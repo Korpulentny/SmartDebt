@@ -8,6 +8,7 @@ services:
             - "2371:2371"
         depends_on:
             - psql-debts-debts
+            - debts-rabbit
 
     users:
         build: users/
@@ -16,6 +17,12 @@ services:
         depends_on:
             - psql-debts-users
 
+    front_server:
+        build: front_server/
+        ports:
+            - "7111:7111"
+        depends_on:
+            - debts-rabbit
 
     front_app:
         build: front/
@@ -35,3 +42,8 @@ services:
             - "3172:5432"
         environment:
             POSTGRES_PASSWORD: password
+
+    debts-rabbit:
+        image: library/rabbitmq:latest
+        ports:
+            - "5672:5672"

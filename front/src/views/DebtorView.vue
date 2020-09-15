@@ -20,7 +20,7 @@
         </v-row>
         <v-row>
           <v-col>
-            Całkowity dług
+            Bilans
           </v-col>
           <v-col>
             {{debtorHistory.totalAmount}}
