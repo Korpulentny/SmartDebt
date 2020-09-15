@@ -7,8 +7,8 @@ services:
         ports:
             - "2371:2371"
         depends_on:
-            - psql-debts-debts
             - debts-rabbit
+            - psql-debts-debts
 
     users:
         build: users/
@@ -17,6 +17,7 @@ services:
         depends_on:
             - psql-debts-users
 
+
     front_server:
         build: front_server/
         ports:
@@ -24,26 +25,40 @@ services:
         depends_on:
             - debts-rabbit
 
+
     front_app:
         build: front/
         ports:
             - "2137:2137"
+
 
     psql-debts-debts:
         image: postgres:latest
         ports:
             - "3721:5432"
         environment:
+            POSTGRES_USER: postgres
             POSTGRES_PASSWORD: password
+            POSTGRES_DB: debtsdb
+        volumes:
+            - db-data:/var/lib/postgresql/debtsdata
 
     psql-debts-users:
         image: postgres:latest
         ports:
             - "3172:5432"
         environment:
+            POSTGRES_USER: postgres
             POSTGRES_PASSWORD: password
+            POSTGRES_DB: postgres
+        volumes:
+            - db-data:/var/lib/postgresql/debtsdata
+
 
     debts-rabbit:
         image: library/rabbitmq:latest
         ports:
             - "5672:5672"
+
+volumes:
+    db-data:

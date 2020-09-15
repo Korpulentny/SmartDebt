@@ -20,14 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="008b10a1-be6b-4003-8903-0082b7f281e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/front_server/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debts/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/debts/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/models/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/models/constants/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debts/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/AppNavigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/AppNavigation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/DebtorView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/DebtorView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/users/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/src/main/resources/schema_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/resources/schema_users.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/services/authentication.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/services/authentication.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/services/debts.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/services/debts.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/front_server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +58,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -65,21 +66,6 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -103,6 +89,7 @@
       <workItem from="1600163700018" duration="7667000" />
       <workItem from="1600173793756" duration="8019000" />
       <workItem from="1600190769008" duration="5210000" />
+      <workItem from="1600203363046" duration="5805000" />
     </task>
     <servers />
   </component>
@@ -122,10 +109,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="454" y="211" width="1084" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600096327171">
+    <state x="316" y="151" width="1084" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600208107624">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="454" y="211" width="1084" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600096327171" />
+    <state x="316" y="151" width="1084" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600208107624" />
     <state x="728" y="358" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1600096303028">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -138,11 +125,11 @@
       <screen x="72" y="27" width="2383" height="2133" />
     </state>
     <state x="172" y="127" width="1648" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog/72.27.2383.2133@72.27.2383.2133" timestamp="1600090628779" />
-    <state x="799" y="217" width="735" height="830" key="find.popup" timestamp="1600201152592">
+    <state x="799" y="217" width="735" height="830" key="find.popup" timestamp="1600208728163">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="1174" y="1308" width="743" height="852" key="find.popup/72.27.1848.1053/535.1080.1920.1080@535.1080.1920.1080" timestamp="1600168943231" />
-    <state x="799" y="217" width="735" height="830" key="find.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600201152592" />
+    <state x="799" y="217" width="735" height="830" key="find.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600208728163" />
     <state x="865" y="564" width="922" height="1058" key="find.popup/72.27.2383.2133@72.27.2383.2133" timestamp="1600093559412" />
     <state x="762" y="1209" width="1372" height="803" key="new project wizard" timestamp="1600186856002">
       <screen x="535" y="1080" width="1920" height="1080" />
@@ -154,10 +141,10 @@
     </state>
     <state x="528" y="138" key="run.anything.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600115910596" />
     <state x="660" y="252" key="run.anything.popup/72.27.2383.2133@72.27.2383.2133" timestamp="1600088302120" />
-    <state x="527" y="142" width="672" height="335" key="search.everywhere.popup" timestamp="1600190811120">
+    <state x="527" y="142" width="672" height="335" key="search.everywhere.popup" timestamp="1600203597486">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="527" y="142" width="672" height="335" key="search.everywhere.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600190811120" />
+    <state x="527" y="142" width="672" height="335" key="search.everywhere.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600203597486" />
     <state x="659" y="259" width="672" height="678" key="search.everywhere.popup/72.27.2383.2133@72.27.2383.2133" timestamp="1600090205836" />
   </component>
 </project>
