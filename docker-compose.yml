@@ -9,6 +9,8 @@ services:
         depends_on:
             - debts-rabbit
             - psql-debts-debts
+        networks:
+            - smartdebt
 
     users:
         build: users/
@@ -16,6 +18,8 @@ services:
             - "1327:1327"
         depends_on:
             - psql-debts-users
+        networks:
+            - smartdebt
 
 
     front_server:
@@ -24,13 +28,15 @@ services:
             - "7111:7111"
         depends_on:
             - debts-rabbit
-
+        networks:
+            - smartdebt
 
     front_app:
         build: front/
         ports:
             - "2137:2137"
-
+        networks:
+            - smartdebt
 
     psql-debts-debts:
         image: postgres:latest
@@ -42,6 +48,8 @@ services:
             POSTGRES_DB: debtsdb
         volumes:
             - db-data:/var/lib/postgresql/debtsdata
+        networks:
+            - smartdebt
 
     psql-debts-users:
         image: postgres:latest
@@ -53,12 +61,19 @@ services:
             POSTGRES_DB: postgres
         volumes:
             - db-data:/var/lib/postgresql/debtsdata
-
+        networks:
+            - smartdebt
 
     debts-rabbit:
         image: library/rabbitmq:latest
         ports:
             - "5672:5672"
+        networks:
+            - smartdebt
 
 volumes:
     db-data:
+
+networks:
+    smartdebt:
+        driver: bridge

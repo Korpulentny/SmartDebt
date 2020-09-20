@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const USER_SERVICE_URL = "http://users:1327/";
+const USER_SERVICE_URL = "http://localhost:1327/";
 
 class AuthenticationService {
 	jwtHeader() {
@@ -31,6 +31,8 @@ class AuthenticationService {
 				if (successResponse.data.jwt) {
 					localStorage.setItem("user", JSON.stringify(successResponse.data));
 				}
+			}).catch(() => {
+				console.log("Login fail");
 			});
 	}
 
@@ -42,6 +44,8 @@ class AuthenticationService {
 		return axios.post(USER_SERVICE_URL + "register", {
 			username: user.username,
 			password: user.password,
+		}).catch(() => {
+			console.log("Login fail");
 		});
 	}
 

@@ -21,13 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="008b10a1-be6b-4003-8903-0082b7f281e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/models/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/models/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debts/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/front/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/services/authentication.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/services/authentication.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/services/debts.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/services/debts.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/front_server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +40,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="not_compose" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -90,6 +92,8 @@
       <workItem from="1600173793756" duration="8019000" />
       <workItem from="1600190769008" duration="5210000" />
       <workItem from="1600203363046" duration="5805000" />
+      <workItem from="1600338987173" duration="16000" />
+      <workItem from="1600620704483" duration="3877000" />
     </task>
     <servers />
   </component>
@@ -109,10 +113,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="316" y="151" width="1084" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600208107624">
+    <state x="399" y="285" width="1084" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600621226495">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="316" y="151" width="1084" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600208107624" />
+    <state x="399" y="285" width="1084" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600621226495" />
     <state x="728" y="358" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1600096303028">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -121,15 +125,16 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1599255415593" />
-    <state x="172" y="127" width="1648" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600090628779">
-      <screen x="72" y="27" width="2383" height="2133" />
+    <state x="150" y="76" width="1279" height="422" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600240630669">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
+    <state x="150" y="76" width="1279" height="422" key="com.intellij.history.integration.ui.views.FileHistoryDialog/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600240630669" />
     <state x="172" y="127" width="1648" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog/72.27.2383.2133@72.27.2383.2133" timestamp="1600090628779" />
-    <state x="799" y="217" width="735" height="830" key="find.popup" timestamp="1600208728163">
+    <state x="799" y="217" width="735" height="830" key="find.popup" timestamp="1600240819974">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="1174" y="1308" width="743" height="852" key="find.popup/72.27.1848.1053/535.1080.1920.1080@535.1080.1920.1080" timestamp="1600168943231" />
-    <state x="799" y="217" width="735" height="830" key="find.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600208728163" />
+    <state x="799" y="217" width="735" height="830" key="find.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600240819974" />
     <state x="865" y="564" width="922" height="1058" key="find.popup/72.27.2383.2133@72.27.2383.2133" timestamp="1600093559412" />
     <state x="762" y="1209" width="1372" height="803" key="new project wizard" timestamp="1600186856002">
       <screen x="535" y="1080" width="1920" height="1080" />

@@ -1,7 +1,7 @@
 
 
 FROM node AS node-base
-WORKDIR /users
+WORKDIR /front
 COPY ./package.json ./package-lock.json ./
 COPY ./vue.config.js ./
 COPY ./babel.config.js ./
