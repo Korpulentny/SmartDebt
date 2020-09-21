@@ -12,8 +12,8 @@ spec:
   ports:
   - name: "7111"
     port: 7111
+    conta
     targetPort: 7111
   selector:
     io.kompose.service: front-server
-status:
-  loadBalancer: {}
+  externalTrafficPolicy: Local

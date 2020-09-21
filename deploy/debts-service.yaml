@@ -15,5 +15,4 @@ spec:
     targetPort: 2371
   selector:
     io.kompose.service: debts
-status:
-  loadBalancer: {}
+  externalTrafficPolicy: Local

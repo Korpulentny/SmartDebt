@@ -15,5 +15,3 @@ spec:
     targetPort: 5672
   selector:
     io.kompose.service: debts-rabbit
-status:
-  loadBalancer: {}

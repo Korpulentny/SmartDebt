@@ -9,11 +9,11 @@ metadata:
     io.kompose.service: front-app
   name: front-app
 spec:
+  type: LoadBalancer
   ports:
   - name: "2137"
     port: 2137
     targetPort: 2137
   selector:
     io.kompose.service: front-app
-status:
-  loadBalancer: {}
+  externalTrafficPolicy: Local

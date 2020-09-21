@@ -1,0 +1,57 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: prod-ingress
+spec:
+    rules:
+          - http:
+              paths:
+                  - path: /debts
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: debts
+                            port:
+                                number: 2371
+                  - path: /users
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: users
+                            port:
+                                number: 1327
+                  - path: /front-server
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: front-server
+                            port:
+                                number: 7111
+                  - path: /front-app
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: front-app
+                            port:
+                                number: 2137
+#                  - path: /psql-debts-debts
+#                    pathType: Prefix
+#                    backend:
+#                        service:
+#                            name: psql-debts-debts
+#                            port:
+#                                number: 3721
+#                  - path: /psql-debts-users
+#                    pathType: Prefix
+#                    backend:
+#                        service:
+#                            name: psql-debts-users
+#                            port:
+#                                number: 3172
+#                  - path: /debts-rabbit
+#                    pathType: Prefix
+#                    backend:
+#                        service:
+#                            name: debts-rabbit
+#                            port:
+#                                number: 5672

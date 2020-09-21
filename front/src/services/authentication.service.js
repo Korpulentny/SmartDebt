@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const USER_SERVICE_URL = "http://localhost:1327/";
+const USER_SERVICE_URL = "http://10.106.176.227:1327/";
 
 class AuthenticationService {
 	jwtHeader() {

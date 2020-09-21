@@ -15,5 +15,4 @@ spec:
     targetPort: 1327
   selector:
     io.kompose.service: users
-status:
-  loadBalancer: {}
+  externalTrafficPolicy: Local
