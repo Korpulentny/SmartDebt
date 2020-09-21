@@ -9,11 +9,12 @@ metadata:
     io.kompose.service: front-server
   name: front-server
 spec:
+  type: LoadBalancer
   ports:
-  - name: "7111"
-    port: 7111
-    conta
-    targetPort: 7111
+    - protocol: TCP
+      port: 7111
+      targetPort: http
   selector:
     io.kompose.service: front-server
-  externalTrafficPolicy: Local
+    app: front-server
+    tier: backend

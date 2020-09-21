@@ -22,18 +22,16 @@
     <list default="true" id="008b10a1-be6b-4003-8903-0082b7f281e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/models/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/models/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debts/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/debts-rabbit-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/debts-rabbit-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/debts-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/debts-deployment.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deploy/debts-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/debts-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/front-app-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/front-app-deployment.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deploy/front-app-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/front-app-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/front-server-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/front-server-deployment.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deploy/front-server-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/front-server-service.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/psql-debts-debts-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/psql-debts-debts-service.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/psql-debts-users-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/psql-debts-users-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/users-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/users-deployment.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deploy/users-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/users-service.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/services/authentication.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/services/authentication.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/services/debts.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/services/debts.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/front_server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +102,7 @@
       <workItem from="1600338987173" duration="16000" />
       <workItem from="1600620704483" duration="11605000" />
       <workItem from="1600676300813" duration="5265000" />
-      <workItem from="1600716281348" duration="9007000" />
+      <workItem from="1600716281348" duration="13690000" />
     </task>
     <servers />
   </component>
@@ -149,11 +147,11 @@
       <screen x="535" y="1080" width="1920" height="1080" />
     </state>
     <state x="1238" y="1080" width="1306" height="545" maximized="true" key="dock-window-1/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600711688569" />
-    <state x="799" y="217" width="735" height="830" key="find.popup" timestamp="1600717525074">
+    <state x="799" y="217" width="735" height="830" key="find.popup" timestamp="1600729443102">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="1174" y="1308" width="743" height="852" key="find.popup/72.27.1848.1053/535.1080.1920.1080@535.1080.1920.1080" timestamp="1600168943231" />
-    <state x="799" y="217" width="735" height="830" key="find.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600717525074" />
+    <state x="799" y="217" width="735" height="830" key="find.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600729443102" />
     <state x="865" y="564" width="922" height="1058" key="find.popup/72.27.2383.2133@72.27.2383.2133" timestamp="1600093559412" />
     <state x="762" y="1209" width="1372" height="803" key="new project wizard" timestamp="1600186856002">
       <screen x="535" y="1080" width="1920" height="1080" />
@@ -165,10 +163,10 @@
     </state>
     <state x="528" y="138" key="run.anything.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600115910596" />
     <state x="660" y="252" key="run.anything.popup/72.27.2383.2133@72.27.2383.2133" timestamp="1600088302120" />
-    <state x="527" y="142" width="672" height="335" key="search.everywhere.popup" timestamp="1600717519139">
+    <state x="527" y="142" width="672" height="335" key="search.everywhere.popup" timestamp="1600729358088">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="527" y="142" width="672" height="335" key="search.everywhere.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600717519139" />
+    <state x="527" y="142" width="672" height="335" key="search.everywhere.popup/72.27.1848.1053/535.1080.1920.1080@72.27.1848.1053" timestamp="1600729358088" />
     <state x="659" y="259" width="672" height="678" key="search.everywhere.popup/72.27.2383.2133@72.27.2383.2133" timestamp="1600090205836" />
   </component>
 </project>

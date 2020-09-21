@@ -9,10 +9,12 @@ metadata:
     io.kompose.service: users
   name: users
 spec:
+  type: LoadBalancer
   ports:
-  - name: "1327"
-    port: 1327
-    targetPort: 1327
+    - protocol: TCP
+      port: 1327
+      targetPort: http
   selector:
     io.kompose.service: users
-  externalTrafficPolicy: Local
+    app: users
+    tier: backend

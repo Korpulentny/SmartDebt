@@ -9,10 +9,12 @@ metadata:
     io.kompose.service: debts
   name: debts
 spec:
+  type: LoadBalancer
   ports:
-  - name: "2371"
-    port: 2371
-    targetPort: 2371
+    - protocol: TCP
+      port: 2371
+      targetPort: http
   selector:
     io.kompose.service: debts
-  externalTrafficPolicy: Local
+    app: debts
+    tier: backend

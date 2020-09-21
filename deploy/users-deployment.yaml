@@ -13,6 +13,9 @@ spec:
   selector:
     matchLabels:
       io.kompose.service: users
+      app: users
+      tier: backend
+      track: stable
   strategy: {}
   template:
     metadata:
@@ -23,13 +26,17 @@ spec:
       labels:
         io.kompose.network/smartdebt: "true"
         io.kompose.service: users
+        app: users
+        tier: backend
+        track: stable
     spec:
       containers:
       - image: korpulentny/smartdebt_users:latest
         imagePullPolicy: ""
         name: users
         ports:
-        - containerPort: 1327
+          - name: http
+            containerPort: 1327
         resources: {}
       restartPolicy: Always
       serviceAccountName: ""
