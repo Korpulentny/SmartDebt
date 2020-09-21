@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: psql-debts-users
+  name: psql-debts-users
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: psql-debts-users
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/smartdebt: "true"
+        io.kompose.service: psql-debts-users
+    spec:
+      containers:
+      - env:
+        - name: POSTGRES_DB
+          value: postgres
+        - name: POSTGRES_PASSWORD
+          value: password
+        - name: POSTGRES_USER
+          value: postgres
+        image: postgres:latest
+        imagePullPolicy: ""
+        name: psql-debts-users
+        ports:
+        - containerPort: 5432
+        resources: {}
+        volumeMounts:
+        - mountPath: /var/lib/postgresql/debtsdata
+          name: db-data
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes:
+      - name: db-data
+        persistentVolumeClaim:
+          claimName: db-data
+status: {}

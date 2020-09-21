@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: debts-rabbit
+  name: debts-rabbit
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: debts-rabbit
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/smartdebt: "true"
+        io.kompose.service: debts-rabbit
+    spec:
+      containers:
+      - image: library/rabbitmq:latest
+        imagePullPolicy: ""
+        name: debts-rabbit
+        ports:
+        - containerPort: 5672
+        resources: {}
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes: null
+status: {}

@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: front-server
+  name: front-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: front-server
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/smartdebt: "true"
+        io.kompose.service: front-server
+    spec:
+      containers:
+      - image: korpulentny/smartdebt_front_server:latest
+        imagePullPolicy: ""
+        name: front-server
+        ports:
+        - containerPort: 7111
+        resources: {}
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes: null
+status: {}
