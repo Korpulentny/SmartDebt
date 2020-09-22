@@ -30,7 +30,7 @@ spec:
         track: stable
     spec:
       containers:
-      - image: korpulentny/smartdebt_front_app:latest
+      - image: korpulentny/smartdebt_front_app:hardcoded
         imagePullPolicy: ""
         name: front-app
         ports:

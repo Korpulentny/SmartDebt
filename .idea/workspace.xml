@@ -21,15 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="008b10a1-be6b-4003-8903-0082b7f281e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/models/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/debts/src/main/java/pl/uw/mim/jnp/smartdebt/debts/models/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/debts-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/debts-deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/debts-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/debts-service.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deploy/front-app-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/front-app-deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/front-app-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/front-app-service.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/front-server-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/front-server-deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/front-server-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/front-server-service.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/users-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/users-deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/users-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/users-service.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/services/authentication.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/services/authentication.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/services/debts.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/services/debts.service.js" afterDir="false" />
     </list>
@@ -102,7 +94,7 @@
       <workItem from="1600338987173" duration="16000" />
       <workItem from="1600620704483" duration="11605000" />
       <workItem from="1600676300813" duration="5265000" />
-      <workItem from="1600716281348" duration="13690000" />
+      <workItem from="1600716281348" duration="14996000" />
     </task>
     <servers />
   </component>
