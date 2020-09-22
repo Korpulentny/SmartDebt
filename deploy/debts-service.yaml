@@ -9,7 +9,6 @@ metadata:
     io.kompose.service: debts
   name: debts
 spec:
-  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 2371

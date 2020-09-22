@@ -2,9 +2,9 @@ import axios from "axios";
 import AuthorizationService from "./authentication.service";
 
 
-const DEBTS_SERVICE_URL = "http://10.104.130.119:2371/";
+const DEBTS_SERVICE_URL = "http://172.17.0.3/debts/";
 
-const RABBIT_SERVICE_URL = "http://10.111.71.236:7111/";
+const RABBIT_SERVICE_URL = "http://172.17.0.3/front-server/";
 
 class DebtsService {
 	getDebtorHistory(user, debtor) {

@@ -9,7 +9,6 @@ metadata:
     io.kompose.service: users
   name: users
 spec:
-  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 1327

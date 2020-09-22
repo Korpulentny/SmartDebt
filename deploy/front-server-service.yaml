@@ -9,7 +9,6 @@ metadata:
     io.kompose.service: front-server
   name: front-server
 spec:
-  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 7111
